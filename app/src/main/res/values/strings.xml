@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GroceryList</string>
+    <string name="noList">You have not created or belong to a list yet</string>
+</resources>

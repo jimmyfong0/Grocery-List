@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="inputMarginStart">60dp</dimen>
+    <dimen name="inputMarginEnd">30dp</dimen>
+    <dimen name="iconMarginStart">15dp</dimen>
+    <dimen name="inputFieldsMargin">15dp</dimen>
+    <dimen name="signUpTopMargin">80dp</dimen>
+    <dimen name="signInMargin">30dp</dimen>
+    <dimen name="signUpPromptMargin">50dp</dimen>
+    <dimen name="signUpPromptButtonMargin">15dp</dimen>
+    <dimen name="signInButtonHeight">35dp</dimen>
+    <dimen name="itemTextSize">20sp</dimen>
+    <dimen name="itemTextSeparation">10dp</dimen>
+</resources>

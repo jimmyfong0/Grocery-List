@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="authViewModel"
+            type="com.example.grocerylist.auth.AuthViewModel"/>
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".auth.SignUpFragment">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/rsz_fruits" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginBottom="25dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="1dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/topLinearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/apple_foreground" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-black"
+                                android:text="Sign Up"
+                                android:textAlignment="center"
+                                android:textSize="25sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/inputLinearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:orientation="vertical"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/topLinearLayout">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/inputFieldsMargin">
+
+                                <ImageView
+                                    android:id="@+id/email_icon"
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:layout_marginStart="@dimen/iconMarginStart"
+                                    android:src="@mipmap/email_foreground"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <EditText
+                                    android:id="@+id/email"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/inputMarginStart"
+                                    android:layout_marginEnd="@dimen/inputMarginEnd"
+                                    android:background="@drawable/round_edittext"
+                                    android:ems="10"
+                                    android:fontFamily="sans-serif-light"
+                                    android:hint="Email"
+                                    android:inputType="textEmailAddress"
+                                    android:paddingLeft="20dp"
+                                    android:paddingTop="8dp"
+                                    android:paddingBottom="8dp"
+                                    android:textSize="15sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.766"
+                                    app:layout_constraintStart_toEndOf="@id/email_icon"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.444" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/inputFieldsMargin">
+
+                                <ImageView
+                                    android:id="@+id/password_icon"
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:layout_marginStart="@dimen/iconMarginStart"
+                                    android:src="@mipmap/password_foreground"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <EditText
+                                    android:id="@+id/password"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/inputMarginStart"
+                                    android:layout_marginEnd="@dimen/inputMarginEnd"
+                                    android:background="@drawable/round_edittext"
+                                    android:ems="10"
+                                    android:fontFamily="sans-serif-light"
+                                    android:hint="Password"
+                                    android:inputType="textPassword"
+                                    android:paddingLeft="20dp"
+                                    android:paddingTop="8dp"
+                                    android:paddingBottom="8dp"
+                                    android:textSize="15sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@id/password_icon"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/inputFieldsMargin">
+
+                                <ImageView
+                                    android:id="@+id/confirm_password_icon"
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:layout_marginStart="@dimen/iconMarginStart"
+                                    android:src="@mipmap/password_foreground"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <EditText
+                                    android:id="@+id/confirmPassword"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/inputMarginStart"
+                                    android:layout_marginEnd="@dimen/inputMarginEnd"
+                                    android:background="@drawable/round_edittext"
+                                    android:ems="10"
+                                    android:fontFamily="sans-serif-light"
+                                    android:hint="Confirm Password"
+                                    android:inputType="textPassword"
+                                    android:paddingLeft="20dp"
+                                    android:paddingTop="8dp"
+                                    android:paddingBottom="8dp"
+                                    android:textSize="15sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@id/confirm_password_icon"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/inputFieldsMargin">
+
+                                <ImageView
+                                    android:id="@+id/fullname_icon"
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:layout_marginStart="@dimen/iconMarginStart"
+                                    android:src="@mipmap/fullname_foreground"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <EditText
+                                    android:id="@+id/fullname"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/inputMarginStart"
+                                    android:layout_marginEnd="@dimen/inputMarginEnd"
+                                    android:background="@drawable/round_edittext"
+                                    android:ems="10"
+                                    android:fontFamily="sans-serif-light"
+                                    android:hint="Full Name"
+                                    android:inputType="textPersonName"
+                                    android:paddingLeft="20dp"
+                                    android:paddingTop="8dp"
+                                    android:paddingBottom="8dp"
+                                    android:textSize="15sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@id/fullname_icon"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btnSignUp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/signUpTopMargin"
+                            android:background="@drawable/signupcolor"
+                            android:text="Sign Up"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/inputLinearLayout" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+</layout>
